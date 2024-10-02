@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Image Gallery</title>
+    <link rel="stylesheet" href="galaries.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="toggle-button" id="toggle-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="family tree.html">Family Tree</a></li>
+                <li><a href="gararies.html">Gallery</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Family Gallery</h1>
+    <div class="gallery">
+        <img src="group images/img 005.jpg" alt="Family Image 1" class="gallery-img">
+        <img src="img/cows.jpg" alt="Family Image 2" class="gallery-img">
+        <img src="group images/Img 002.jpg" alt="Family Image 3" class="gallery-img">
+        <img src="group images/img 003.jpg" alt="Family Image 4" class="gallery-img">
+        <img src="group images/img 004.jpg" alt="Family Image 5" class="gallery-img">
+        <img src="group images/img 006.jpg" alt="Family Image 6" class="gallery-img">
+        <img src="group images/Img 002.jpg" alt="Family Image 3" class="gallery-img">
+        <img src="group images/img 003.jpg" alt="Family Image 4" class="gallery-img">
+        <img src="group images/img 004.jpg" alt="Family Image 5" class="gallery-img">
+        <img src="group images/img 006.jpg" alt="Family Image 6" class="gallery-img"> 
+        <!-- Add more images as needed -->
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        
+    </div>
+    
+<footer>
+        <div class="footer">
+         
+            <p>@copy; 2024 ALL J's. All rights reserved</p>
+            
+            
+        </div>
+        <div class="contact">
+            <p>contact: tumjamleck@gmail.com</p>
+
+        </div>
+        <div>
+            <a href="index.html">Home, </a>
+            <a href="family tree.html">family tree, </a>
+            <a href="gararies.html">Photo Gallery, </a>
+            <a href="calendar.html">Calendar.</a>
+        </div>
+    </footer>
+
+    
+    <script >
+     // Show the lightbox and hide the header when an image is clicked
+document.querySelectorAll('.gallery-img').forEach(img => {
+    img.addEventListener('click', (e) => {
+        document.getElementById('lightbox').style.display = 'flex';
+        document.getElementById('lightbox-img').src = e.target.src;
+        document.querySelector('header').style.display = 'none';  // Hide header
+    });
+});
+
+// Hide the lightbox and show the header when the close button is clicked
+document.querySelector('.close').addEventListener('click', () => {
+    document.getElementById('lightbox').style.display = 'none';
+    document.querySelector('header').style.display = 'block';  // Show header
+});
+
+
+    </script> 
+    <script src="toggleMenu.js"></script>
+</body>
+
+</html>
